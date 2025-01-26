@@ -14,26 +14,26 @@ app.post('/submit-form', (req, res) => {
     service: 'gmail',
     auth: {
       user: 'pavansriram285@gmail.com',
-      pass: 'uxenigxnmkvumqbh',
+      pass: 'mkowjrybudkawwtj',
     },
   });
 
   const mailOptions = {
     from: 'pavansriram285@gmail.com',
     to: 'pavansriramkurukuri3@gmail.com',
-    subject: `Job Update From Portfolio: ${subject}`,
+    subject: `You have Connect from Portfolio`,
     html: `
-      <i> HI, KPS you have a message from ${name} </i>
-      <h2> Here is the subject <br> ${subject} </h2>
-      <h2>Check description here <br> ${Description} </h2>
-      <i><b> Reply them at ${email} </b></i>
+      <i> Hi, Pavan Sriram Kurukuri, you have a message from ${name} </i>
+      <h2>Regarding, ${subject} </h2>
+      <h2>Check the following description<br> ${Description} </h2>
+      <i><b>You can connect with them at ${email} </b></i>
     `,
   };
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       return res.status(500).send(error.toString());
     }
-    res.status(200).send('<h1 style="text-align:center;margin:200px"><i> Your message recieved <br> <p> THANK YOU </p> </h1></i>');
+    res.status(200).send('<h1 style="text-align:center;margin:200px"><i> Your Connection Request recieved <br> <p> THANK YOU </p><br> <p>I will respond as soon as possible</p> </h1></i>');
   });
 });
 
